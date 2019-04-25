@@ -1,0 +1,39 @@
+<script>
+
+function computerPlay() {
+    computerChoice = Math.floor(Math.random() * 3);
+    if (computerChoice == 0){
+        return 'Rock';
+    } else if (computerChoice == 1){
+        return 'Paper';
+    } else if (computerChoice ==2){
+        return 'Scissors';
+    }
+}
+
+function playRound() {
+    computerSelection = computerPlay();
+    playerSelection = prompt("What is your selection?");
+    playerSelection = playerSelection.toLowerCase();
+    if (computerSelection == 'Rock' && playerSelection == 'rock'){
+        return 'Computer chooses Rock, you chose Rock - It\'s a tie!'  
+    } else if (computerSelection == 'Paper' && playerSelection == 'paper'){
+        return 'Computer chooses Paper, you chose Paper - It\'s a tie!'  
+    } else if (computerSelection == 'Scissors' && playerSelection == 'scissors'){
+        return 'Computer chooses Scissors, you chose Scissors - It\'s a tie!' 
+    } else if (computerSelection == 'Rock' && playerSelection == 'scissors'){
+        return 'Computer chooses Rock, you chose Scissors - You Lose!' 
+    } else if (computerSelection == 'Rock' && playerSelection == 'paper'){
+        return 'Computer chooses Rock, you chose Paper - You Win!' 
+    } else if (computerSelection == 'Scissors' && playerSelection == 'rock'){
+        return 'Computer chooses Scissors, you chose Rock - You Win!' 
+    } else if (computerSelection == 'Paper' && playerSelection == 'rock'){
+        return 'Computer chooses Paper, you chose Rock - You Lose!'  
+    } else if (computerSelection == 'Scissors' && playerSelection == 'paper'){
+        return 'Computer chooses Scissors, you chose Paper - You Lose!'  
+    } else if (computerSelection == 'Paper' && playerSelection == 'scissors'){
+        return 'Computer chooses Paper, you chose Scissors - You Win!' 
+    }
+}
+
+</script>
