@@ -36,4 +36,33 @@ function playRound() {
     }
 }
 
+function game() {
+  let playerScore = 0;
+  let computerScore = 0;
+  let tie = 0;
+  for (round = 0; round < 5; round ++){
+    let game = playRound();
+    if (game.includes("Win")){
+    playerScore ++;
+    console.log(game);
+    console.log("The score is Player - " + playerScore + " | Computer - " + computerScore);
+  } else if (game.includes("Lose")){
+    computerScore ++;
+    console.log(game);
+    console.log("The score is Player - " + playerScore + " | Computer - " + computerScore);
+  } else if (game.includes("Tie")){
+    tie ++;
+    console.log(game);
+    console.log("The score is Player - " + playerScore + " | Computer - " + computerScore);
+  }
+  }
+  if (playerScore > computerScore){
+    console.log("Final Score Player - " + playerScore + " | Computer " + computerScore + " You Win!")
+  } else if (playerScore < computerScore){
+    console.log("Final Score Player - " + playerScore + " | Computer " + computerScore + " You Lose, Sorry!")
+  } else if (playerScore == computerScore){
+    console.log("Final Score Player - " + playerScore + " | Computer " + computerScore + " Its a Tie")
+  }
+}
+
 </script>
